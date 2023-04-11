@@ -1,5 +1,8 @@
 var wordBreak = function(s, wordDict) {
     let set = new Set(wordDict);
+    // When s = 'catsandog', wordDict = ['cats', 'ca', 'ts']
+  // After 'cats' and 'ca', it will become 'andog', 'tsandog'
+  // For 'tsandog', after 'ts', it will become 'andog' again, visited set here is for memoization
     let visited = new Set();
     let queue = [0];
 
